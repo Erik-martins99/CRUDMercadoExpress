@@ -5,8 +5,8 @@ const mercadoSchema = new mongoose.Schema({
     nome: {type: String, required: true},
     endereco: {type: String},
     quantLojas: {type: Number}
-});
+}, {versionKey: false});
 
 const mercado = mongoose.model("mercados", mercadoSchema);
 
-export default mercado;
+export { mercado, mercadoSchema };

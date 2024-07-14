@@ -1,4 +1,4 @@
-import mercado from "../models/Mercado.js";
+import { mercado } from "../models/Mercado.js";
 
 class MercadoController {
 

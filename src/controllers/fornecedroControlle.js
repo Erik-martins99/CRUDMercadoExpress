@@ -31,8 +31,8 @@ class FornecedorController {
 
     static async updateFornecedor(req, res) {
         try {
-            const fornecedorUpdate = await fornecedor.findByIdAndUpdate(req.params.id, req.body);
-            res.status(200).json(fornecedorUpdate);
+            await fornecedor.findByIdAndUpdate(req.params.id, req.body);
+            res.status(200).json({ message: "Produto updated" });
         } catch(err) {
             res.status(500).jason({ message: `${err.message}` });
         }

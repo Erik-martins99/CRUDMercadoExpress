@@ -31,7 +31,7 @@ class MercadoController {
 
     static async updateMercado(req, res) {
         try {
-            const mercadoUpdate = await mercado.findByIdAndUpdate(req.params.id, req.body);
+            await mercado.findByIdAndUpdate(req.params.id, req.body);
             res.status(204).json({ message: "Mercado Updated" });
         } catch(err) {
             res.status(500).json({ message: `${err.message}` });
